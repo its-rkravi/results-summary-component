@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  /* Primary Colors */
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+
+  /* Background Gradients */
+  --Light-slate-blue: hsl(252, 100%, 67%);
+  --Light-royal-blue: hsl(241, 81%, 54%);
+  --Violet-blue: hsla(256, 72%, 46%, 1);
+  --Persian-blue: hsla(241, 72%, 46%, 0);
+
+  /* Font Weights */
+  --fw-s: 500;
+  --fw-m: 700;
+  --fw-l: 800;
+
+  /* Screen Sizes | layout */
+  --mobile: 375px;
+  --desktop: 1440px;
+}
+
+/* Global Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  font-size: 12px;
+  font-family: "Hanken Grotesk";
+}
+
+/*  Now Design the actual component */
+
+.attribution {
+  max-width: var(--desktop);
+  min-height: 100vh;
+  /* border: 7px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.result-container {
+  max-width: 500px;
+  /* border: 5px solid green; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 2rem;
+}
+
+.part-1 {
+  /* border: 3px solid tomato; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: linear-gradient(
+    to bottom,
+    var(--Light-slate-blue),
+    var(--Light-royal-blue) 50%
+  );
+  text-align: center;
+  color: var(--light-lavender);
+  border-radius: 2rem;
+}
+
+.result--marks {
+  /* border: 1px solid black; */
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  background: linear-gradient(var(--Violet-blue), var(--Light-royal-blue));
+}
+
+.result--title {
+  font-weight: var(--fw-m);
+  font-size: 1.5rem;
+}
+
+.obtained--marks {
+  color: var(--white);
+  font-size: 3.5rem;
+  font-weight: var(--fw-l);
+}
+
+.total--marks {
+  font-weight: var(--fw-s);
+  color: var(--light-lavender);
+  opacity: 0.5;
+}
+
+.result--output {
+  font-weight: var(--fw-m);
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.result--conclude {
+  font-weight: var(--fw-s);
+  font-size: 1.2rem;
+}
+
+/* Part 2 */
+
+.part-2 {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.summary-marks-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.summary--title {
+  font-size: 1.5rem;
+  font-weight: var(--fw-m);
+  color: var(--dark-gray-blue);
+}
+
+.marks-review {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0.7rem;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+}
+
+.summary-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.summary-data {
+  display: flex;
+  gap: 0.3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.red-text {
+  color: var(--Light-red);
+  font-weight: var(--fw-m);
+}
+
+.yellow-text {
+  color: var(--Orangey-yellow);
+  font-weight: var(--fw-m);
+}
+
+.green-text {
+  color: var(--Green-teal);
+  font-weight: var(--fw-m);
+}
+
+.blue-text {
+  color: var(--Cobalt-blue);
+  font-weight: var(--fw-m);
+}
+
+.text-dark {
+  color: var(--dark-gray-blue);
+  font-weight: var(--fw-l);
+}
+
+.text-light {
+  color: var(--dark-gray-blue);
+  font-weight: var(--fw-l);
+  opacity: 0.5;
+}
+
+.btn {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  font-weight: var(--fw-l);
+  background-color: var(--dark-gray-blue);
+  color: var(--white);
+  border-radius: 5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+}
+
+.light-red {
+  background-color: hsla(0, 100%, 50%, 0.05);
+}
+
+.light-yellow {
+  background-color: hsla(58, 100%, 50%, 0.05);
+}
+
+.light-green {
+  background-color: hsla(117, 100%, 50%, 0.05);
+}
+
+.light-blue {
+  background-color: hsla(244, 100%, 50%, 0.05);
+}
+
+@media (max-width: 500px) {
+  .result-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .part-1 {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+}
